@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lola | ESTEEM Master’s at Notre Dame</title>
+  <style>
+    /* General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1c1c1c; background-color: #ffffff; }
+    a { text-decoration: none; color: #0c2340; }
+    h1, h2, h3 { color: #0c2340; }
+    
+    /* Navbar */
+    nav { position: fixed; top: 0; left: 0; width: 100%; background: #0c2340; color: white; padding: 15px; z-index: 1000; }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav ul li { margin: 0 20px; }
+    nav ul li a { color: white; font-weight: bold; transition: color 0.3s ease; }
+    nav ul li a:hover { color: #c99700; }
+
+    /* Section Styles */
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+    .home { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(12,35,64,0.8), rgba(12,35,64,0.8)), url('https://www.nd.edu/assets/images/backgrounds/main-quad.jpg') no-repeat center/cover; color: white; }
+    .home h1 { font-size: 3rem; margin-bottom: 10px; }
+    .home p { font-size: 1.2rem; }
+
+    .projects, .resume, .blog, .contact { background-color: #f9f9f9; margin-top: 20px; border-radius: 10px; padding: 40px; }
+
+    .project-card { background: white; padding: 20px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 20px; transition: transform 0.3s ease; }
+    .project-card:hover { transform: scale(1.02); }
+
+    .skills-list { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+    .skill { background: #0c2340; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+
+    /* Contact Form */
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { padding: 10px; border: none; background: #c99700; color: white; font-weight: bold; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+    button:hover { background: #0c2340; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #0c2340; color: white; margin-top: 40px; }
+
+    /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+
+    @media(max-width: 768px) {
+      nav ul { flex-direction: column; }
+      nav ul li { margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="home">
+    <h1>Lola</h1>
+    <h2>ESTEEM Master’s at Notre Dame</h2>
+    <p>Innovation | Entrepreneurship | Engineering Leadership</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Master’s student in the ESTEEM Program at the University of Notre Dame. With a background in Biomedical Engineering from Marquette University, I’m passionate about innovation, startups, and leveraging technology to solve real-world problems. My leadership experiences as a Resident Assistant and involvement in honor societies have shaped my ability to build communities and drive impact.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Wireless Blood Pressure Monitor System</h3>
+      <p>A biomedical device for wireless arterial blood pressure monitoring using Arduino Nano BLE Sense boards and Bluetooth LE.</p>
+      <p><strong>Technologies:</strong> Arduino, Bluetooth LE, C++</p>
+    </div>
+    <div class="project-card">
+      <h3>Global Grad Grub: MacroChef Edition</h3>
+      <p>A recipe planning app for graduate students to cook efficiently and healthily, prioritizing time, cost, and nutrition.</p>
+      <p><strong>Technologies:</strong> Python, Tkinter, AI Integration</p>
+    </div>
+    <div class="project-card">
+      <h3>Azure Speech-to-Sensor Project</h3>
+      <p>Integrated Azure Speech Services with Arduino Nano BLE Sense sensors to trigger actions from voice commands.</p>
+      <p><strong>Technologies:</strong> Azure Speech Services, Arduino, Bluetooth</p>
+    </div>
+  </section>
+
+  <section id="resume" class="resume">
+    <h2>Resume & Skills</h2>
+    <p><a href="resume.pdf" target="_blank">Download Resume (PDF)</a></p>
+    <div class="skills-list">
+      <span class="skill">C++</span>
+      <span class="skill">Python</span>
+      <span class="skill">MATLAB</span>
+      <span class="skill">Mbed</span>
+      <span class="skill">Pitching</span>
+      <span class="skill">Concept Screening</span>
+      <span class="skill">Market Research</span>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Blog & Reflections</h2>
+    <article>
+      <h3>My First Month in ESTEEM</h3>
+      <p>Reflecting on the journey so far — balancing technical depth, entrepreneurial mindset, and community building.</p>
+    </article>
+    <article>
+      <h3>Innovation at the Crossroads of Engineering and Business</h3>
+      <p>Thoughts on how interdisciplinary collaboration drives impactful ventures.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Connect with me on <a href="https://linkedin.com" target="_blank">LinkedIn</a> | <a href="https://github.com" target="_blank">GitHub</a> | <a href="mailto:youremail@example.com">Email</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lola | ESTEEM Master’s at Notre Dame</p>
+  </footer>
+</body>
+</html>
