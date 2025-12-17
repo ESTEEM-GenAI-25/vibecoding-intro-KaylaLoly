@@ -1,6 +1,4 @@
-Kayla Imanzi
 AI Usage in Building InBetween Therapy AI
-December 2024
 
 My journey building InBetween Therapy AI involved more adaptation than I anticipated. I initially planned to use Google AI Studio for code generation, but after encountering repeated errors where the preview function would consistently break, I switched to Lovable AI. I also used ChatGPT early in Phase 1 to brainstorm my document outline and understand technical requirements for backend architecture. Lovable AI generated 100% of my prototype's functional code: the complete React component structure, Tailwind CSS styling,, interactive modal system, and all the mock data. When I prompted for a "calming design appropriate for a mental health practice," the AI interpreted this emotional context and chose soft colors, generous whitespace, and a card-based layout without me specifying exact design specifications.
 
