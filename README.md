@@ -3,7 +3,7 @@
 An AI-powered scheduling assistant for therapists that recommends optimal appointment times and generates client messages.
 
 🔗 **[Live Demo](https://calm-flow-dash.lovable.app/)**
-
+🔗 **[Demo Video](https://notredame.zoom.us/rec/share/adbFkKaqbxS_tjaso4IXHm-nq4S_sHxY9izMtQnHpVs5CJpqBoNW2BNvJjY2tYRY.3TjRBkvEk1qx6hDB)**
 ---
 
 ## What It Does
@@ -94,3 +94,4 @@ not mechanical.
 - Learn from actual therapist choices
 
 ---
+
