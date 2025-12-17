@@ -18,9 +18,9 @@
   _Color-coded appointment blocks for easy scanning_
 
 - **AI Scheduling Assistant (Primary Integration)**  
-  _Generates 3 scored time slot recommendations (0-100 fit score)_
+  _Generates 3 scored time slot recommendations (0-100 fit score), with an adjacent calendar view for each option_
   _Provides explanations for each suggestion_
-  _Generates client-facing appointment confirmation notes_
+  _Generates client-facing appointment confirmation notes, with a send note button included_
 
 ## 3. AI Specification
 _The AI acts as an experienced practice manager that analyzes multiple factors to recommend optimal appointment times. When a therapist clicks "Suggest Time" on a scheduling request, the AI:_
@@ -72,31 +72,39 @@ Color-codes by fit quality (green = excellent, sage = good, amber = acceptable)
 Refinement:
 Add the name of the website on top (InBetween Therapy AI) and also add a second layer to the "suggest time" functionality, where a note to send to the client is also generated.
 
+For the final submission, I had my co-founder look at my site and give me suggestions on how to ameliorate it. Here is the prompt which was used to make the final touches.
+Refining Prompt: Here are some changes I would like to make for the dashboard to be more intuitive and functional:
+For suggested times, when someone clicks "suggest time" they shouldn't have to click get "get ai recommendations", the ai should run automatically.
+When the ai suggestions appear, show the options both as words and an accompanying visual to make it easier for the therapist to visualize.
+For the note to client, instead of "copy note", have a "send note" button.
+When suggesting times, address therapist personally “you” not "the therapist"
+When an appointment time is selected, it should show up on the calendar and be removed from pending requests.
 
-## 6. Content Requirements
-- **Primaru User Flow:**  
-  - Therapist logs into dashboard (simulated - no auth in prototype)
-  - Reviews pending appointment requests in left panel
-  - Clicks "Suggest Time" on a request requiring scheduling
-  - AI modal opens with 3 analyzed recommendations
-  - Therapist reads explanations and selects best option
-  - Reviews auto-generated client message
-  - Clicks "Copy Message" to paste into their communication tool
-  - Clicks "Approve" to finalize (demonstrative in prototype)
- 
+This final prompt led to the final version of the website now available. At the beginnign of the project, I gave free reign to Lovable AI to see what it would create, and I was okay with the first iterations. But I learned to be more specific with my asks as the website took form, and I had a clearer idea of what worked vs. what did not work.
 
-- *Technical Constraints:**  
-  - No Real Data Persistence: Refresh clears all state
-  - No Authentication: Single-user demonstration only
+## 6. UX & Limitations
+- *Intended User Journey:**  
+  - Therapist logs into dashboard and sees pending appointment requests
+  - Reviews client request details (initials, preferred time, appointment type)
+  - Clicks "Suggest Time" to get AI recommendations
+  - Reviews 3 scored options with explanations and concern flags
+  - Selects best option and reviews auto-generated client message
+  - Clicks "Send" to send message via their existing communication tool
+  - Clicks "Select" to finalize time in their calendar
+    
+- *Limitations:**  
+  - Mock data only: The AI analyzes fake client histories, not real patterns, so recommendations aren't truly personalized yet
+  - No authentication: Anyone with the link can access the dashboard - there's no login or user accounts
   - No Calendar Integration: Cannot connect to actual Google Calendar
   - Static Recommendations: AI doesn't actually learn over time yet
+ 
+- *Ethical & Trust-Related Limitations:**  
+  - Do not use for real scheduling: This is a demonstration prototype only - it cannot connect to real calendars or send actual client notifications
+  - Privacy concerns: In this demo, there's no data encryption or HIPAA compliance measures implemented
+  - Cultural/accessibility blind spots: The AI hasn't been trained on diverse scheduling preferences across different cultures, time zones, or accessibility needs
     
-## 7. Next Steps
-- Connect to actual Google Calendar for live availability
-- Build backend database to store real appointment data
-- Implement functional booking and confirmation workflow
-- Add user authentication for therapist login
-- Learn from which recommendations therapists actually choose
-- Let therapists train the AI on their specific preferences
-- Add confidence scores to recommendations
+## 7. Future Roadmap:
+- Real calendar integration: Connect to Google Calendar and other scheduling platforms to read actual availability and book appointments
+- Notification system: Automatically send email/SMS confirmations to clients when appointments are scheduled or changed
+- Multi-therapist support: Allow practice managers to oversee scheduling across 5-15 therapists with different specialties and availability
  
